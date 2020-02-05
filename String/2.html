@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var s = "ABCDEFG";
+	var s1 = "";
+	var chet = 0;
+	alert(s.length);
+	if (s.length%2!==0){
+		chet=0.5;
+	}
+	for (i=s.length/2+chet;i<s.length;i++){
+		s1=s1+s[i];
+	}
+	for (i=0;i<s.length/2+chet;i++){
+		s1=s1+s[i];
+	}
+	
+	document.write(s1);
+</script>
+</body>
+</html>
