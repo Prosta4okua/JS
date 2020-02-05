@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var str = "afbaskfnaHqwertyuiopHfklsmfls";
+	var strBtwH = "";
+	var strFin = "";
+	var firstH = 0;
+	var lastH = 0;
+	var isHasH = false;
+	var isInterval = false; //Between H's
+	var i = 0; //Index for cycles
+	for (i=0;i<str.length;i++){//Here I'm looking for first and second "H"
+		if (str[i]==="H"){
+			lastH = i;
+		if ((isHasH == false)&&(str[i]="H")){
+			isHasH = true;
+			firstH = i;
+		}
+		}
+	}
+	for (i=lastH-1;i>firstH;i--){//Write in strBtwH characters between two H
+		strBtwH=strBtwH+str[i];
+	}
+	for (i=0;i<str.length;i++){
+		if ((i<=firstH)||(i>=lastH)){
+			strFin = strFin + str[i];
+		}else{
+			if (isInterval === false){
+				strFin = strFin + strBtwH;
+				isInterval = true;
+			}
+		}
+	}
+	document.write(strFin);
+</script>
+</body>
+</html>
