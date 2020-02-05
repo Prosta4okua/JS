@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var s = "AAAhfmflkamflafsffsfhsfhsfhsfhsfhsfhsfhsfhfhshhhhsfhZZZ";
+	var s1 = "";
+	var s2 ="";
+	var firstH = 0;
+	var lastH = 0;
+	var isFirst = true;
+	for (i=0;i<s.length;i++){
+		if (s[i]=="h"){
+		lastH = i;
+		if ((isFirst === true)&&(s[i]=="h")){
+			firstH = i;
+			isFirst = false;
+		}
+	}
+	}
+	for (i=0;i<s.length;i++){
+		if ((s[i]==="h")&&(i>firstH)&&(i<lastH)){
+			s1=s1+"H";
+		}else{
+			s1=s1+s[i];
+		}
+	}
+	alert(s1)
+</script>
+</body>
+</html>
