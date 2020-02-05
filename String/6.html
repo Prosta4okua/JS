@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var s = "afadadhABCDEFGhgodog";
+	var s1 = "";
+	var k = 0;
+	var first = false;
+	var second = false
+	var k1 = true;
+	var counter = 0;
+	var cycle = true;
+	for (i=0;i<s.length;i++){
+		if (s[i]==="h"){
+			counter++;
+			k=i;
+			if (first==false){
+				k1=i;
+				first = true;
+			}
+		}
+	}
+	for (i=0;i<s.length;i++){
+		cycle = false;
+		if ((i>=k1)&&(i<=k)){
+			cycle =true;
+		}
+		if (cycle==false){
+		s1=s1+s[i];}
+	}
+	document.write(s1);
+</script>
+</body>
+</html>
