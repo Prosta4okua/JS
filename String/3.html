@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var s = "slovo1 slovo2";
+		var s1 = "";
+		var s2 = "";
+		var lol = true;
+		for (i=0;i<s.length;i++){
+			if ((s[i]!==" ")&&(lol === true)){
+				s1=s1+s[i];
+			}
+			if ((lol==true)&&(s[i]===" ")){
+				lol=false;
+			}
+			if ((s[i]!==" ")&&(lol === false)){
+				s2=s2+s[i];
+			}
+		}
+		s = s2 + " " + s1;
+		document.write(s);
+	</script>
+</body>
+</html>
