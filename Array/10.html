@@ -1,0 +1,36 @@
+<html>
+<script>
+a = "    abcdefgeh  sss efjssjfn 3fskjnfksjnfksnfk  yyy a3332 b33 c332 d332 yyy gfljsnflsjf";
+var s1=[];
+var s2 = ["a","e","y","u","i","o"];
+var c ="";
+var c1="";
+var b="";
+var k = 0;
+var j = 0;
+var count = 0;
+a=a+" ";
+for (i=0;i<a.length;i++){
+  if(a[i]!==' '){
+    b=b+a[i];}
+  if(a[i]==' '){
+    s1[k]=b;
+    if (b!==""){
+      k++;
+    }
+    b="";
+}
+}
+document.write("Изначальный массив: "+s1+"</br>")
+j=0;
+i=0;
+for (i=0;i<a.length;i++){
+    for (j=0;j<s2.length;j++){
+      if (a[i]==s2[j]){
+        count++;
+       // alert(s2[j]);
+      }}
+  }
+document.write("Количество гласных: "+count)
+</script>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<script>
+a = "    dugnsognsjgn    fjssjfn fskjnfksjnfksnfk     fljsnflsjf";
+var s1=[];
+var b="";
+var helpStr = "";
+var k = 0;
+var count = 1;
+var min = "";
+a=a+" ";
+for (i=0;i<a.length;i++){
+  if(a[i]!==' '){
+    b=b+a[i];}
+  if(a[i]==' '){
+    s1[k]=b;
+    if (b!==""){
+      k++;
+    }
+    b="";
+}
+}
+min = s1[0];
+document.write("Изначальный массив: "+s1+"</br>")
+for (i=0;i<s1.length;i++){
+  if (min.length>s1[i].length){
+  	mini = i;
+  	min = s1[i];
+  }
+}
+document.write("Самое короткое слово: "+min +"</br>");
+document.write("Количество символов: "+min.length +"</br>");
+count = count + mini
+document.write("Порядковый номер слова: "+count +"</br>");
+helpstr = s1[0];
+s1[0]=s1[mini];
+s1[mini]=helpstr;
+document.write("Получившийся массив: "+s1)
+</script>
+</html>

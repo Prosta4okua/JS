@@ -1,0 +1,39 @@
+<html>
+<script>
+a = "    abcdefgeh  sss 2fjssjfn 3fskjnfksjnfksnfk  ууу 33332 233 2332 2332 ууу 4fljsnflsjf";
+var s1=[];
+var b="";
+var s2 = [];
+var s3 = "";
+var k = 0;
+var c = "";
+var isAdd = false;
+a=a+" ";
+for (i=0;i<a.length;i++){
+  if(a[i]!==' '){
+    b=b+a[i];}
+  if(a[i]==' '){
+    s1[k]=b;
+    if (b!==""){
+      k++;
+    }
+    b="";
+}
+}
+document.write("Изначальный массив: "+s1+"</br>")
+//document.write(": "+"</br>");
+j=0;
+for (i=0;i<s1.length;i++){
+  if (s1[i].length>=4){
+    s2[j]=s1[i]
+    j++;
+  }
+  }
+  document.write("Получившийся массив: "+s2+"</br>")
+/*document.write("Получившийся массив: "+"</br>");
+for (j=0;j<s2.length;j++){
+  document.write(s2[j]+"</br>")
+}*/
+//document.write(unique(s1));
+</script>
+</html>

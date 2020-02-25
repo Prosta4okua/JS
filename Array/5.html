@@ -1,0 +1,38 @@
+<html>
+<script>
+a = "    abcdefgeh  sss 2fjssjfn 3fskjnfksjnfksnfk   33332 233 2332  4fljsnflsjf";
+var s1=[];
+var b="";
+var s2 = "";
+var s3 = "";
+var k = 0;
+var c = "";
+a=a+" ";
+for (i=0;i<a.length;i++){
+  if(a[i]!==' '){
+    b=b+a[i];}
+  if(a[i]==' '){
+    s1[k]=b;
+    if (b!==""){
+      k++;
+    }
+    b="";
+}
+}
+min = s1[0];
+document.write("Изначальный массив: "+s1+"</br>")
+document.write("Палиндромы: "+"</br>");
+for (i=0;i<s1.length;i++){
+  s2 = "";
+  c=s1[i];
+  for (j=c.length-1;j>-1;j--){
+      s2 = s2 + c[j];
+  }
+ // document.write(s2+"</br>");
+  if (s2==s1[i]){
+    document.write(s1[i]+"</br>")
+  }
+}
+//document.write(s1[1]);
+</script>
+</html>

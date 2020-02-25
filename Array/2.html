@@ -1,0 +1,32 @@
+<html>
+<script>
+a = "    dugnsognsjgn    fjsnfksjfn fskjnfksjnfksnfk     fljsnflsjf";
+var s1=[];
+var b="";
+var k = 0;
+var count = 1;
+var max = "";
+a=a+" ";
+for (i=0;i<a.length;i++){
+  if(a[i]!==' '){
+    b=b+a[i];}
+  if(a[i]==' '){
+    s1[k]=b;
+    if (b!==""){
+      k++;
+    }
+    b="";
+}
+}
+for (i=0;i<s1.length;i++){
+  if (max.length<s1[i].length){
+  	maxi = i;
+  	max = s1[i];
+  }
+}
+document.write("Самое длинное слово: "+max +"</br>");
+document.write("Количество символов: "+max.length +"</br>");
+count = count + maxi
+document.write("Порядковый номер слова: "+count);
+</script>
+</html>

@@ -1,0 +1,68 @@
+<html>
+<script>
+/*Пробегаемся по массиву. Берём элемент последнег
+*/
+a = "    abcdefgea  ssa efjssjfa 3fskjnfksjnfksnfd  yye a3332f b33g3g d332g yyya gfljsnflsjfk";
+var s1=[];//Массив в котором слова
+var s2 = [];//Массив, в котором записаны индексы одинаковых
+var s3 = [];//Массив конечный, куда записывается результаты
+var c ="";
+var c1="";
+var b="";
+var k = 0;
+var j = 0;
+var z = 0;
+var count = 0;
+var hmm = "";
+var s2i = 0; //Переменная-индекс для s2
+var fail = false;
+var check = false;
+var f = 0;
+a=a+" ";
+for (i=0;i<a.length;i++){
+  if(a[i]!==' '){
+    b=b+a[i];}
+  if(a[i]==' '){
+    s1[k]=b;
+    if (b!==""){
+      k++;
+    }
+    b="";
+}
+}
+for (i=0;i<s1.length+1;i++){
+  s2[i]=false;
+}
+//document.write("Изначальный массив: "+s1+"</br>")
+for (i=0;i<s1.length;i++){
+  for (j=i+1;j<s1.length-1;j++){
+    if (s1[i].charAt(s1[i].length-1) === s1[j].charAt(s1[j].length-1)){
+      s2[i]=true;
+      s2[j]=true;
+      alert(i+"</br>"+j)
+    }
+  }
+  }
+for (i=0;i<s1.length;i++){
+  //fail = false;
+ /* for (j=0;j<=s1.length;j++){
+    if (s2[i]!==""){
+      fail = true;
+    }
+  }*/
+  if (s2[i]==false){
+    s3[f] = s1[i];
+    f++;
+  }
+  /*if (fail === false){
+    s3[f] = s1[i];
+    f++;
+  }*/
+}
+//document.write("Результат: "+s3);
+for (i=0;i<s1.length;i++){
+  document.write(s1[i]+"|||||"+s3[i]+"</br>");
+}
+//document.write(s2)
+</script>
+</html>*\
