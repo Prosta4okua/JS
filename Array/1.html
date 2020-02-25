@@ -1,0 +1,24 @@
+<html>
+<script>
+a = "    dugnsognsjgn    fjsnfksjfn fskjnfksjnfksnfk     fljsnflsjf";
+var s1=[];
+var b="";
+var k = 0;
+a=a+" ";
+for (i=0;i<a.length;i++){
+  if(a[i]!==' '){
+    b=b+a[i];}
+  if(a[i]==' '){
+    s1[k]=b;
+    if (b!==""){
+      k++;
+    }
+    b="";
+}
+}
+/*for (i=0;i<s1.length;i++){
+  document.write(s1[i]+"</br>");
+}*/
+document.write("Количество слов: "+s1.length)
+</script>
+</html>
